@@ -1,5 +1,4 @@
 package data;
-
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
