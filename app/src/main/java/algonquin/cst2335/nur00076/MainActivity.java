@@ -34,25 +34,16 @@ import algonquin.cst2335.nur00076.databinding.ActivityMainBinding;
 
 /**
  * This class is used to check the password requirements and provide the correct toast message.
- * @author Kamelia Pezeshki
+ * @author Guled Nur
  * @version 1.0
  */
 public class MainActivity extends AppCompatActivity {
-//    ImageView imgView;
-//    Switch sw;
-//    Button loginButton;
-//    EditText emailEditText, passwordEditText;
-//    String emailAddress;
-
-
     protected String cityName;
     protected RequestQueue queue = null;
     Bitmap image;
     String url = null;
     String iconName = null;
     ImageRequest imgReq;
-
-    // String imgUrl = "https://openweathermap.org/img/w/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,16 +94,11 @@ public class MainActivity extends AppCompatActivity {
                                         image = bitmap;
                                         FileOutputStream fOut = null;
                                         try {
-                                            // fOut = openFileOutput(iconName + ".png", Context.MODE_PRIVATE);
                                             image.compress(Bitmap.CompressFormat.PNG, 100,MainActivity.this.openFileOutput(iconName + ".png", Activity.MODE_PRIVATE));
-                                            //  fOut.flush();
-                                            //fOut.close();
+
                                         } catch (FileNotFoundException e) {
                                             e.printStackTrace();
-                                        } //catch (IOException e) {
-                                        //e.printStackTrace();
-                                        //}
-
+                                        }
                                     }
                                 }, 1024, 1024, ImageView.ScaleType.CENTER, null, (error) -> {
 
